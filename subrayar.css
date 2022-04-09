@@ -1,0 +1,46 @@
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    padding: 1.5em 0;
+    margin: 0 10px;
+    position: relative;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+h1:hover {
+    color: #F9CFF2;
+}
+
+h1:before,
+h1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    transition: transform 0.3s;
+}
+
+h1:before {
+    top: 23px;
+    transform: translateX(-100%);
+}
+
+h1:after {
+    bottom: 23px;
+    transform: translateX(100%);
+}
+
+h1:hover::before,
+h1:hover::after {
+    transform: translateX(0);
+    overflow: hidden;
+}
